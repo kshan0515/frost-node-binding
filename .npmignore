@@ -1,0 +1,11 @@
+target/
+src/
+__tests__/
+Cargo.toml
+Cargo.lock
+build.rs
+jest.config.js
+tsconfig.json
+.github/
+.gitignore
+*.node

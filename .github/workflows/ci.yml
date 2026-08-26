@@ -144,15 +144,26 @@ jobs:
           path: artifacts
 
       - name: Create npm dirs
-        run: npx napi create-npm-dirs
+        run: npx napi create-npm-dir
 
       - name: Move artifacts
         run: pnpm artifacts
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Publish
+      - name: Prepublish
+        run: pnpm prepublishOnly
+
+      - name: Publish to NPM
         run: |
+          if [ -d "npm" ]; then
+            for dir in npm/*; do
+              if [ -d "$dir" ]; then
+                echo "Publishing $dir..."
+                npm publish "$dir" --access public || true
+              fi
+            done
+          fi
           npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

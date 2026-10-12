@@ -43,6 +43,8 @@
     "artifacts": "napi artifacts",
     "build": "napi build --platform --release",
     "build:debug": "napi build --platform",
+    "postbuild": "node -e \"require('fs').copyFileSync('index.d.copy.ts', 'index.d.ts')\"",
+    "postbuild:debug": "node -e \"require('fs').copyFileSync('index.d.copy.ts', 'index.d.ts')\"",
     "prepublishOnly": "napi prepublish -t npm",
     "test": "jest",
     "universal": "napi universal",

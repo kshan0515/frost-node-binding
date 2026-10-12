@@ -6,6 +6,8 @@ version = "0.1.0"
 [lib]
 crate-type = ["cdylib"]
 
+
+
 [dependencies]
 # NAPI dependencies
 napi = { version = "2.12.2", default-features = false, features = ["napi4", "async", "serde-json"] }
@@ -19,6 +21,10 @@ rand = "0.8"
 
 # FROST dependencies
 frost-ed25519 = { version = "2.2.0", features = ["serde"] }
+frost-core = "2.2.0"
+zeroize = { version = "1.8", features = ["derive"] }
+
+
 
 [build-dependencies]
 napi-build = "2.0.1"

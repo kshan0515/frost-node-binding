@@ -249,6 +249,7 @@ name = "frost-node-binding"
 version = "0.1.0"
 dependencies = [
  "bincode",
+ "frost-core",
  "frost-ed25519",
  "hex",
  "napi",
@@ -258,6 +259,7 @@ dependencies = [
  "serde",
  "serde_json",
  "thiserror 1.0.69",
+ "zeroize",
 ]
 
 [[package]]

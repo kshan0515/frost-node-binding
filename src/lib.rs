@@ -8,4 +8,4 @@ pub mod executor;
 // Re-export for N-API
 pub use dkg::FrostDkgState;
 pub use signing::FrostSigningState;
-pub use executor::FrostExecutor;
+pub use executor::{FrostExecutor, FrostKeyShareHandle, ZeroizableNonces};

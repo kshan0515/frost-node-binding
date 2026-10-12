@@ -1,6 +1,6 @@
 {
   "name": "@kshan0515/frost-node-binding",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Node.js native binding for FROST Ed25519 MPC protocol - Distributed key generation and threshold signing",
   "main": "index.js",
   "types": "index.d.ts",
